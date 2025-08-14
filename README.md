@@ -1,4 +1,4 @@
-# 🧠 Transformers Explained: Comprehensive Notes!
+# 🧠 Transformers Explained: Comprehensive Notes
 
 This repository contains detailed, organized notes extracted from a YouTube video transcript titled **"Transformers Explained."**  
 The goal is to provide a simplified and intuitive understanding of the Transformer deep learning architecture, which is fundamental to modern AI advancements like **Large Language Models (LLMs)** such as GPT.
