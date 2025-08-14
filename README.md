@@ -7,7 +7,7 @@ The goal is to provide a simplified and intuitive understanding of the Transform
 
 
 
-## ✨ Key Concepts Covered (So Far)!
+## ✨ Key Concepts Covered (So Far)
 
 ### 🔡 Understanding Language Models
 - The fundamental goal: **predicting the next word**.
