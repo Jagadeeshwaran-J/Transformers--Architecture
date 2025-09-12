@@ -19,6 +19,16 @@ A concise reference guide to core concepts behind the Transformer architecture, 
 - **Contextual Vectors (Contextual Embeddings)**  
   Word representations that depend on surrounding context.  
   *E.g., “bank” in “river bank” vs. “bank account” has different vectors.*
+  
+- **Word Embedding (Static Embeddings)**  
+  Maps each token to a fixed vector of numbers. These vectors are learned from large corpora and are **context-independent**.  
+  Example models: **Word2Vec**, **GloVe**  
+  Limitation: The same vector is used for a word regardless of meaning or context.
+
+- **Contextual Embedding (Dynamic Embeddings)**  
+  Token representations that **change depending on surrounding context**.  
+  Example: "bank" in *"river bank"* vs. *"bank account"* will have **different vectors**.  
+  Used in models like **BERT**, **GPT**, **T5**, etc.
 
 - **Positional Encoding**  
   Injects information about token positions since Transformers lack inherent sequence order.
