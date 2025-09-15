@@ -1,8 +1,9 @@
 # Self-Attention: Super Simple Workflow
 
-## 🎯 The Big Picture
-**Problem:** Words mean different things in different sentences
-**Solution:** Make words "look around" and understand their neighbors
+## 🎯 The Big Problem
+**Problem:** Words mean different things in different sentences. 
+
+**Solution:** Make words "look around" and understand their neighbors.
 
 ---
 
@@ -20,7 +21,9 @@ love  = [0.5, 0.2, 0.1, ...]  (512 numbers)
 Apple = [0.3, 0.7, 0.4, ...]  (512 numbers)
 phones= [0.8, 0.1, 0.9, ...]  (512 numbers)
 ```
-*Each word = a list of 512 numbers*
+*Each word = a list of 512 embedding dimension.*
+
+*✅ 512 is not a universal rule — it’s just a sweet spot chosen in the original Transformer paper, and many followed that as a baseline.*
 
 ---
 
@@ -60,7 +63,9 @@ Use softmax to make numbers add up to 100%:
 
 ```
 Raw scores: [0.2, 0.1, 0.8, 0.9]
-           ↓ softmax ↓
+               -------------
+              | ↓ softmax ↓ |
+               -------------
 Percentages: [10%, 5%, 40%, 45%]
 ```
 
@@ -110,17 +115,6 @@ Apple = Context-aware word (20% fruit + 80% tech)
 
 ---
 
-## 🧠 Super Simple Mental Model
-
-Think of self-attention like a **group chat**:
-
-1. **Everyone introduces themselves** (original embeddings)
-2. **Everyone listens to everyone else** (calculate similarities)  
-3. **Everyone updates their opinion** based on who they're most similar to (weighted mixing)
-4. **Result:** Everyone's opinion is now **context-aware**
-
----
-
 ## 🔥 Why This is Powerful
 
 ### Before (RNN):
@@ -137,15 +131,7 @@ Think of self-attention like a **group chat**:
 
 ## 📊 Visual Summary
 
-```
-INPUT:  [I] [love] [Apple] [phones]
-           ↓ Look Around ↓
-        🔍 Find Relationships 🔍
-           ↓ Mix Information ↓  
-OUTPUT: [I'] [love'] [Apple'] [phones']
-                      ↑
-                Context-aware!
-```
+<img width="1347" height="466" alt="image" src="https://github.com/user-attachments/assets/940f68bd-52a5-4f77-8d23-7915d536e42c" />
 
 ---
 
